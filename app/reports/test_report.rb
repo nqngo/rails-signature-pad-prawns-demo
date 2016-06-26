@@ -11,13 +11,16 @@ class TestReport < Prawn::Document
     text "Form text here"
     move_down 20
     
-    sigpad_height = 98
+    # The pad dimension
+    sigpad_height = 55
     sigpad_width = 198
     
+    # Draw the signature box
     bounding_box([0, cursor], width: sigpad_width, height: sigpad_height) do
       stroke_bounds
       @sig.each do |e|
-        stroke { line [e["lx"], sigpad_height - 10 - e["ly"]], [e["mx"], sigpad_height - 10 - e["my"] ] }
+        stroke { line [e["lx"], sigpad_height - e["ly"]],
+                      [e["mx"], sigpad_height - e["my"] ] }
       end
     end
     
