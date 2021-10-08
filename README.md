@@ -1,6 +1,7 @@
 # SignaturePad + Prawn on Rails 4 Demo
 
-This is a minimal Rails project to demonstrate how to render signature pad data in Prawn PDF.
+This is a minimal Rails project to demonstrate how to render signature pad data in Prawn PDF:
+https://stackoverflow.com/questions/37847686/render-json-to-image-in-prawn-pdf
 
 Once the server is started, you can preview the signature generated on SignaturePad by visit:
 `localhost:3000`
